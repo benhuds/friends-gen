@@ -21,7 +21,7 @@ def s1(c,v,n):
     opts = [v1,v2]
     return "The One where "+c+" "+v+random.choice(opts)
 
-def s2(c,v,n):
+def s2(c,n):
     v1 = "the "+n
     v2 = c+"'s "+n
     opts = [v1,v2]
@@ -33,4 +33,4 @@ if __name__ == "__main__":
     n = pick(clean('nounlist.txt'))
     v = pick(grab(clean('verblist.txt')))
 
-    print random.choice([s1(c,v,n),s2(c,v,n)])
+    print random.choice([s1(c,v,n),s2(c,n)])
