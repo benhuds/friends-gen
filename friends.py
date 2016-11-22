@@ -19,13 +19,13 @@ def s1(c,v,n):
     v1 = ""
     v2 = " the "+n
     opts = [v1,v2]
-    return "The One where "+c+" "+v+opts[random.randint(0,1)]
+    return "The One where "+c+" "+v+random.choice(opts)
 
 def s2(c,v,n):
     v1 = "the "+n
     v2 = c+"'s "+n
     opts = [v1,v2]
-    return "The One with "+opts[random.randint(0,1)]
+    return "The One with "+random.choice(opts)
 
 if __name__ == "__main__":
     characters = ['Ross','Chandler','Joey','Rachel','Monica','Phoebe']
