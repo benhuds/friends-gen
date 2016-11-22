@@ -33,4 +33,4 @@ if __name__ == "__main__":
     n = pick(clean('nounlist.txt'))
     v = pick(grab(clean('verblist.txt')))
 
-    print random.choice[s1(c,v,n),s2(c,v,n)]
+    print random.choice([s1(c,v,n),s2(c,v,n)])
