@@ -20,10 +20,10 @@ As a rough grammar this looks something like:
 
 where
 
-Charactername = one of the main six 'Friends' characters
-V = a verb ending in 's'
-Det = "the"
-N = a noun
+- Charactername = one of the main six 'Friends' characters
+- V = a verb ending in 's'
+- Det = "the"
+- N = a noun
 
 Not related to [Andy Pandy's](https://twitter.com/_Pandy) work, which generates
 [entire episode scripts](http://fortune.com/2016/01/21/robot-friends-sequel/)
