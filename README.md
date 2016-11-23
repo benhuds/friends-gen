@@ -1,4 +1,4 @@
-Generate a random 'Friends' episode name by running
+Generate your very own 'Friends' episode name by running
 
     friends.py
 

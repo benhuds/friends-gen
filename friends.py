@@ -4,7 +4,7 @@ def clean(f):
     return open(f,'rU').read().split('\n')
 
 def pick(l):
-    return l[random.choice(range(0,len(l)))].title()
+    return random.choice(l).title()
 
 def grab(l):
     p = []
@@ -14,6 +14,13 @@ def grab(l):
         else:
             pass
     return p
+
+def s():
+    characters = ['Ross','Chandler','Joey','Rachel','Monica','Phoebe']
+    c = pick(characters)
+    n = pick(clean('nounlist.txt'))
+    v = pick(grab(clean('verblist.txt')))
+    return random.choice([s1(c,v,n),s2(c,n)])
 
 def s1(c,v,n):
     v1 = ""
@@ -28,9 +35,4 @@ def s2(c,n):
     return "The One with "+random.choice(opts)
 
 if __name__ == "__main__":
-    characters = ['Ross','Chandler','Joey','Rachel','Monica','Phoebe']
-    c = pick(characters)
-    n = pick(clean('nounlist.txt'))
-    v = pick(grab(clean('verblist.txt')))
-
-    print random.choice([s1(c,v,n),s2(c,n)])
+    print s()
