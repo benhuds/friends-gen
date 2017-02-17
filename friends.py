@@ -1,25 +1,16 @@
 import random
 
-def clean(f):
+def getWords(f):
     return open(f,'rU').read().split('\n')
 
 def pick(l):
     return random.choice(l).title()
 
-def grab(l):
-    p = []
-    for i in l:
-        if i[-1] == 's' and i[-2] != 's':
-            p.append(i)
-        else:
-            pass
-    return p
-
 def s():
     characters = ['Ross','Chandler','Joey','Rachel','Monica','Phoebe']
     c = pick(characters)
-    n = pick(clean('nounlist.txt'))
-    v = pick(grab(clean('verblist.txt')))
+    n = pick(getWords('nounlist.txt'))
+    v = pick(filter(lambda x: x[-1] == 's' and x[-2] != 's', getWords('verblist.txt')))
     return random.choice([s1(c,v,n),s2(c,n)])
 
 def s1(c,v,n):
